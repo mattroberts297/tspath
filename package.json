@@ -1,6 +1,6 @@
 {
   "name": "@mattroberts297/tspath",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
     "compile": "tsc",
