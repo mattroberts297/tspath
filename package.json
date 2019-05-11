@@ -1,11 +1,11 @@
 {
-  "name": "tspath",
-  "version": "1.3.5",
+  "name": "@mattroberts297/tspath",
+  "version": "0.0.1",
   "description": "TypeScript Path Igniter resolves @paths specified in tsconfig",
   "scripts": {
     "build": "tsc",
     "test": "mocha -r ts-node/register test/**.*/test.ts",
-    "tspath": "node ./dist/src/tspath.js"
+    "tspath": "node ./dist/tspath.js"
   },
   "preferGlobal": true,
   "bin": {
