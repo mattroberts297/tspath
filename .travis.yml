@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "6"
+script: npm run compile
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: "mail@mattroberts.io"
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
+env:
+  global:
+    - secure: "aEbIclGHqgGIHtQbk9VdH7iMzcYGv41zebej7NnoMO5dBPaRAttVSWb7G3PTQGaRix5GdppRZM9Qs9CbpUVO9ylzh62rBF6uEz2LhUWMkWqOOTKaBbJYvDwk3o259fqLvSXN0fwkW3mqYrjEHMqN36UoYWHG4Kb1cX8yfyPkSx0u4Z/0bP4Fe0G/di0AILeKJxu3uAGRq4hjUixMkFNrQ+AIXH5CAdV3QgWyv0KCs65C3tf5nl4fWcsrRwJZzSEyDOOoQPIUmLhoxhN8pj5J0YCyr9LbSJBgLjoHrYOEmK/bt6tQrkGpeU5ZQCQAlxW6owBLA1IvQL0zNoxUcJPgmoSl8wu527ddeEZXSLvuPQQ3iZHURHDCOLc/tbJg6laMqFqCDL/P9BBTi5QArLdRncmEQk7Aqkr79Arh2bMkxKhXGmhELn74/EPg+Ze+bVjZXiNP064hfpoPESZWmXn/qJ0I4Elw1YAvMAYbACRFy5eSfG/F09RW3AWhDLKoA9n5ujVh559wqonGBUN77s8/J1Da8HMdzdYKlsl/Eovf33+nzgXWN/ji/mVPKie1ESQN9S0ZO0mv4Q8ZWiOP0gl/06b35gV7QYf63C1rIwUcVSPanOy+/3TYrm2HKcntSRAMtegYGP2cH/EP42NmJhiTxwHltOWwqDKgk56266GELP0="
