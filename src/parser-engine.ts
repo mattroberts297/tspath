@@ -229,7 +229,7 @@ export class ParserEngine {
 		let ast = null;
 
 		try {
-			ast = esprima.parse(inputSourceCode); //, { raw: true, tokens: true, range: true, comment: true });
+			ast = esprima.parse(inputSourceCode, { range: true, comment: true, tokens: true });
 		}
 		catch(error) {
 			console.log("Unable to parse file:", filename);
@@ -244,6 +244,12 @@ export class ParserEngine {
 		});
 
 		let option = { comment: true, format: { compact: this.compactMode,  quotes: '"' }};
+
+		if (!this.compactMode && ast && ast.comments) {
+			// manually attach comments
+			ast = escodegen.attachComments(ast, ast.comments, ast.tokens);
+		}
+
 		let finalSource = escodegen.generate(ast, option);
 
 		try {
